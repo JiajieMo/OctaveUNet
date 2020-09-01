@@ -1,0 +1,101 @@
+AGENT:
+  RESUME: true
+  RUN_MODE: train
+DATA:
+  DATASET:
+    AUG_PIPELINE:
+    - brightness
+    - contrast
+    - gamma
+    - saturation
+    - hflip
+    - vflip
+    - rotate
+    - affine
+    DATASET_NAME: drive
+    DATA_TYPE: null
+    IMAGE_KEY: image
+    MASK_KEY: null
+    PRE_PIPELINE:
+    - resize
+    TARGET_KEY: target
+    TEST_IDS: null
+    VALID_IDS: null
+  DATA_ROOT: data
+  ENABLE_DROP_LAST: false
+  ENABLE_PIN_MEMORY: false
+  ENABLE_SHUFFLE: true
+  TRAIN_BATCH_SIZE: 4
+  VALID_BATCH_SIZE: 4
+DEVICE:
+  DEVICE_IDS: 0
+  ENABLE_BENCHMARK: true
+  ENABLE_CUDA: true
+  RANDOM_SEED: 42
+LOCAL:
+  CKPT_EXT: .pth
+  CKPT_SUBDIR: ckpts
+  EXP_ROOT: exps/ablation-study
+  EXP_SUBDIR: alpha_0.0
+  LOG_SUBDIR: logs
+  OUT_SUBDIR: outs
+  SUMM_SUBDIR: summs
+LOSS:
+  FOCAL_ALPHA: null
+  FOCAL_GAMMA: null
+  LOSS_NAME: weighted_binary_cross_entropy
+  POS_WEIGHT_FACTOR: 0.1
+METRICS:
+  METRIC_NAMES:
+  - acc
+  - se
+  - sp
+  - f1
+  - prc
+  - auroc
+  - ap
+  MONITOR_NAMES: null
+  THRESHOLD:
+    BLOCK_SIZE: null
+    CONSTANT: 0.5
+    THRESHOLD_METHOD: constant
+  VALID_PATIENCE: 1
+MODEL:
+  ALPHAS:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  CHANNELS:
+  - 3
+  - 64
+  - 128
+  - 256
+  - 512
+  - 1
+  DILATION: 1
+  ENABLE_BATCH_NORM: true
+  ENABLE_BIAS: true
+  ENABLE_DROPOUT: false
+  GROUPS: 1
+  KERNEL_SIZE: 3
+  MODEL_NAME: octave
+  PADDING: 1
+  STRIDE: 1
+OPTIM:
+  LEARNING_RATE: 0.001
+  LR_SCHEDULER:
+    FACTOR: 0.9
+    PATIENCE: 10
+    SCHEDULER_NAME: plateau
+  MAX_EPOCH: 1000
+  MOMENTUM: null
+  OPTIMIZER_NAME: adam
+  WEIGHT_DECAY: 0.0005
+SUMM:
+  COMPARE_PATIENCE: null
+  FIGURE:
+    TRAIN_PATIENCE: 1000
+    VALID_PATIENCE: 1000

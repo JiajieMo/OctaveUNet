@@ -1,0 +1,20 @@
+[INFO   ] 2020-04-28 17:32:39 - src.agents.base_agents.device_handler: Agent will run on device(s): [0]
+[INFO   ] 2020-04-28 17:32:39 - src.agents.base_agents.device_handler: Set random seed: 42
+[INFO   ] 2020-04-28 17:32:39 - src.agents.retina.utils.get_model: Retrieved model: octave
+[INFO   ] 2020-04-28 17:32:44 - src.models.utils.model_summary.model_summary_formatter: Total params: 16,531,651
+[INFO   ] 2020-04-28 17:32:44 - src.models.utils.model_summary.model_summary_formatter: Total memory: 1916.00 MB
+[INFO   ] 2020-04-28 17:32:44 - src.models.utils.model_summary.model_summary_formatter: Total MAdd: 267.44 G MAdd
+[INFO   ] 2020-04-28 17:32:44 - src.models.utils.model_summary.model_summary_formatter: Total FLOPs: 133.93 G FLOPs
+[INFO   ] 2020-04-28 17:32:44 - src.models.utils.model_summary.model_summary_formatter: Total MemRead: 1.82 G B
+[INFO   ] 2020-04-28 17:32:44 - src.models.utils.model_summary.model_summary_formatter: Total MemWrite: 1.64 G B
+[INFO   ] 2020-04-28 17:32:44 - src.models.utils.model_summary.model_summary_formatter: Total MemR+W: 3.45 G B
+[INFO   ] 2020-04-28 17:32:46 - src.agents.retina.utils.get_criterion: Set final positive weight: tensor(1.0501)
+[INFO   ] 2020-04-28 17:32:46 - src.agents.retina.utils.get_criterion: Retrieved loss: weighted_binary_cross_entropy
+[INFO   ] 2020-04-28 17:32:49 - src.agents.base_agents.graph_handler: Retrieved optimizer: adam
+[INFO   ] 2020-04-28 17:32:49 - src.agents.base_agents.state_handler: No checkpoint file ("*.pth") found in exps/ablation-study/alpha_0.0/ckpts
+[INFO   ] 2020-04-28 21:25:13 - src.agents.base_agents.state_handler: Successfully loaded agent checkpoint: exps/ablation-study/alpha_0.0/ckpts/last.pth
+[INFO   ] 2020-04-28 21:25:13 - src.agents.base_agents.state_handler: Model checkpoint at training epoch: 1000, step: 5000
+[INFO   ] 2020-04-28 21:25:28 - src.agents.base_agents.output_handler: metrics:
+      weighted_binary_cross_entropy       acc        se        sp        f1       prc     auroc        ap
+mean                       0.212294  0.961670  0.777680  0.979598  0.779517  0.784709  0.954292  0.823837
+std                        0.009724  0.002865  0.041591  0.003536  0.016798  0.037463  0.010795  0.018095

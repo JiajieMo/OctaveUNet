@@ -1,0 +1,43 @@
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.configs_handler: Get configs from: exps/ablation-study/ablation_base.yaml
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.configs_handler: Get configs from: exps/ablation-study/alpha_0.75.yaml
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.configs_handler: Get configs from: exps/configs/cuda_id/cuda_3.yaml
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.paths_handler: Directory of exp_dir already exist: exps/ablation-study/alpha_0.75
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.paths_handler: Directory of log_dir already exist: exps/ablation-study/alpha_0.75/logs
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.paths_handler: Directory of summ_dir already exist: exps/ablation-study/alpha_0.75/summs
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.paths_handler: Directory of out_dir already exist: exps/ablation-study/alpha_0.75/outs
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.paths_handler: Directory of ckpt_dir already exist: exps/ablation-study/alpha_0.75/ckpts
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.base_agents.configs_handler: Saved run time configs to: exps/ablation-study/alpha_0.75/run_time_configs.yaml
+[DEBUG  ] 2020-04-28 23:28:09 - src.datasets.drive_dataset: Split mode: train
+[DEBUG  ] 2020-04-28 23:28:09 - src.datasets.drive_dataset: Retrieved all 20 samples for DRIVE dataset
+[DEBUG  ] 2020-04-28 23:28:09 - src.datasets.drive_dataset: Split mode: valid
+[DEBUG  ] 2020-04-28 23:28:09 - src.datasets.drive_dataset: Retrieved all 20 samples for DRIVE dataset
+[DEBUG  ] 2020-04-28 23:28:09 - src.datasets.drive_dataset: Split mode: test
+[DEBUG  ] 2020-04-28 23:28:09 - src.datasets.drive_dataset: Retrieved all 20 samples for DRIVE dataset
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.retina.utils.get_data: Retrieved dataset: drive
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.retina.utils.get_data: Set batch size for training set: 4
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.retina.utils.get_data: Set batch size for validating set: 4
+[DEBUG  ] 2020-04-28 23:28:09 - src.agents.retina.utils.get_data: Set batch size for testing set: 1
+[INFO   ] 2020-04-28 23:28:28 - src.agents.base_agents.device_handler: Agent will run on device(s): [3]
+[INFO   ] 2020-04-28 23:28:29 - src.agents.base_agents.device_handler: Set random seed: 42
+[INFO   ] 2020-04-28 23:28:29 - src.agents.retina.utils.get_model: Retrieved model: octave
+[INFO   ] 2020-04-28 23:28:32 - src.models.utils.model_summary.model_summary_formatter: Total params: 16,536,516
+[INFO   ] 2020-04-28 23:28:32 - src.models.utils.model_summary.model_summary_formatter: Total memory: 1023.62 MB
+[INFO   ] 2020-04-28 23:28:32 - src.models.utils.model_summary.model_summary_formatter: Total MAdd: 79.67 G MAdd
+[INFO   ] 2020-04-28 23:28:32 - src.models.utils.model_summary.model_summary_formatter: Total FLOPs: 39.97 G FLOPs
+[INFO   ] 2020-04-28 23:28:32 - src.models.utils.model_summary.model_summary_formatter: Total MemRead: 1.08 G B
+[INFO   ] 2020-04-28 23:28:32 - src.models.utils.model_summary.model_summary_formatter: Total MemWrite: 886.62 M B
+[INFO   ] 2020-04-28 23:28:32 - src.models.utils.model_summary.model_summary_formatter: Total MemR+W: 1.95 G B
+[DEBUG  ] 2020-04-28 23:28:32 - src.datasets.drive_dataset: Retrieved all 20 samples for DRIVE dataset
+[DEBUG  ] 2020-04-28 23:28:32 - src.datasets.drive_dataset: Retrieved all 20 samples for DRIVE dataset
+[DEBUG  ] 2020-04-28 23:28:34 - src.datasets.utils.get_dataset_statistics: Calculated positive weight (positive / negative): 10.5013
+[DEBUG  ] 2020-04-28 23:28:34 - src.agents.retina.utils.get_criterion: Set positive weight dampening factor: 0.1
+[INFO   ] 2020-04-28 23:28:34 - src.agents.retina.utils.get_criterion: Set final positive weight: tensor(1.0501)
+[INFO   ] 2020-04-28 23:28:34 - src.agents.retina.utils.get_criterion: Retrieved loss: weighted_binary_cross_entropy
+[INFO   ] 2020-04-28 23:28:38 - src.agents.base_agents.graph_handler: Retrieved optimizer: adam
+[INFO   ] 2020-04-28 23:28:38 - src.agents.base_agents.state_handler: No checkpoint file ("*.pth") found in exps/ablation-study/alpha_0.75/ckpts
+[INFO   ] 2020-04-29 05:04:02 - src.agents.base_agents.state_handler: Successfully loaded agent checkpoint: exps/ablation-study/alpha_0.75/ckpts/last.pth
+[INFO   ] 2020-04-29 05:04:02 - src.agents.base_agents.state_handler: Model checkpoint at training epoch: 1000, step: 5000
+[INFO   ] 2020-04-29 05:04:21 - src.agents.base_agents.output_handler: metrics:
+      weighted_binary_cross_entropy       acc        se        sp        f1       prc     auroc        ap
+mean                       0.293337  0.962806  0.846524  0.974247  0.798507  0.759079  0.980310  0.891372
+std                        0.007239  0.002334  0.037847  0.004967  0.016706  0.044914  0.005538  0.014755
