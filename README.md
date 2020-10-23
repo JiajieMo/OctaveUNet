@@ -1,6 +1,6 @@
-# Octave UNet for Retinal Vessel segmentation
+# Octave UNet for Retinal Vessel Segmentation
 
-This is an implementation of [Octave UNet](https://arxiv.org/abs/1906.12193) with PyTorch. The model generates segmentation for retinal vascular structures in color fundus images. It is based on the backbone of the UNet model and integrated with the octave convolution and octave transposed convolution operations.
+This is an implementation of [Octave UNet](https://arxiv.org/abs/1906.12193) with PyTorch. The model generates segmentation for retinal vascular structures in color fundus images. It is based on the backbone of the UNet model and integrated with the octave convolution and the octave transposed convolution operations.
 
 ![fundus-images](assets/fundus-image.jpg)![vessel-probability](assets/vessel-probability.jpg)
 
@@ -9,7 +9,7 @@ This repository contains:
 * Implementation of Octave UNet models and UNet models (`src/models/octave/octave_unet.py`).
 * Training code for retinal vessel segmentation datasets including: [DRIVE](http://www.isi.uu.nl/Research/Databases/DRIVE/), [CHASEDB1](https://blogs.kingston.ac.uk/retinal/chasedb1/), [STARE](http://cecas.clemson.edu/~ahoover/stare/), and [HRF](https://www5.cs.fau.de/research/data/fundus-images/).
 * Evaluation metrics (`src/metrics/*.py`) for binary segmentation including: accuracy, sensitivity, specificity, f1-score, AUROC, and AP.
-* Jupyter notebooks (`notes/*.ipynb`) to demonstrate usages and visualize the segmentation performances reported in the paper.
+* Jupyter notebooks (`notes/*.ipynb`) for demonstrating usages and visualizing the segmentation performances reported in the paper.
 
 ## Citation
 
@@ -45,7 +45,7 @@ python main.py --configs=*.yaml
 [notes/retinal-vessel-segmentation-datasets.ipynb](notes/retinal-vessel-segmentation-datasets.ipynb): This notebooks demonstrates the usage of dataset class implemented for the following retinal vessel segmentation datasets: [DRIVE](http://www.isi.uu.nl/Research/Databases/DRIVE/), [CHASEDB1](https://blogs.kingston.ac.uk/retinal/chasedb1/), [STARE](http://cecas.clemson.edu/~ahoover/stare/), and [HRF](https://www5.cs.fau.de/research/data/fundus-images/).
 
 These implementation of dataset classes in `src/datasets/*` should be able to handle the download and extraction of the compressed source files.
-However, if failed, you can download the dataset source files from their official websites manually and organize the source files in the following directory structure:
+However, if the auto-download processes failed, you can download the dataset source files from their official websites manually and organize the source files in the following directory structure:
 
 ```ascii
 data
